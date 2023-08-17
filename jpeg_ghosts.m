@@ -47,9 +47,9 @@ function diffImages = jpeg_ghosts(file, b, minQ, maxQ, stepQ)
         % of the image to make the JPEG ghost easier to see.  These lines
         % aren't neccesairy just make the result clearer.
 
-        %norm_diff_image_histeq = histeq(norm_diff_image);
+        norm_diff_image_histeq = histeq(norm_diff_image);
         
-        %diff_image_adjust = imadjust(norm_diff_image_histeq);
+        diff_image_adjust = imadjust(norm_diff_image_histeq);
         
         % Add the normalized image to the return array
         diffImages{i} = norm_diff_image;
